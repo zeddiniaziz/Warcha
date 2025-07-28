@@ -1,0 +1,48 @@
+/* Hide number input spinners for Chrome, Safari, Edge, Opera */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Hide number input spinners for Firefox */
+.no-spinner[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media print {
+  #header,
+  #footer,
+  #nav,
+  .sidebar,
+  .app-navbar,
+  .app-footer {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  body * {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .receipt-ticket,
+  .receipt-ticket * {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+  .receipt-ticket {
+    position: fixed !important;
+    left: 50% !important;
+    top: 30px !important;
+    transform: translateX(-50%) !important;
+    width: 320px !important;
+    min-height: 100px !important;
+    z-index: 999999 !important;
+    margin: 0 auto !important;
+    padding: 16px !important;
+    background: #fff !important;
+    border: none !important;
+  }
+}
